@@ -24,7 +24,7 @@
  *****************************************/
 
 /**
- * @brief SPI Struct
+ * @brief SPI handler struct
  */
 typedef struct {
     SPI_HandleTypeDef* hspi;
@@ -35,17 +35,12 @@ typedef struct {
  *****************************************/
 
 /**
- * @brief SPI init
- *
- * @param handler_spi Pointer to handler_spi.
- */
-void handler_spi_init(handler_spi_t* handler_spi);
-
-/**
  * @brief Transmit data with SPI
  *
- * @param handler_spi Pointer to handler_spi.
- * @param data Data to send
+ * @param handler_spi pointer to handler_spi.
+ * @param buffer buffer with data to be transmitted
+ * @param buffer_size biffer size
+ * @param timeout timeout of data transmission in ms
  */
 void handler_spi_transmit(handler_spi_t* handler_spi, uint8_t* buffer, uint16_t buffer_size, uint32_t timeout);
 

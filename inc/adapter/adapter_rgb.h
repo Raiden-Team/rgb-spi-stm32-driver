@@ -12,7 +12,6 @@
 #define __ADAPTER_RGB_H__
 
 #include <stdint.h>
-#include <stdbool.h>
 
 #include "handler_spi.h"
 #include "spi.h"
@@ -20,15 +19,6 @@
 /*****************************************
  * Public Types
  *****************************************/
-
-/**
- * @brief rgb color type
- */
-typedef struct {
-    uint8_t red;
-    uint8_t green;
-    uint8_t blue;
-} rgb_color_t;
 
 /**
  * @brief rgb color enum
@@ -46,6 +36,8 @@ typedef enum {
 
 /**
  * @brief set the color to the rgb adapter
+ *
+ * @param rgb_color rgb color (from enumeration) to be set
  */
 void adapter_rgb_set_color(adapter_rgb_color_enum_t rgb_color);
 

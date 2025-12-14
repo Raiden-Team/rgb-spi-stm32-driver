@@ -15,13 +15,27 @@
 #include "adapter_rgb.h"
 
 /*****************************************
+ * Public Types
+ *****************************************/
+
+/**
+ * @brief rgb color type
+ */
+typedef struct {
+    uint8_t red;
+    uint8_t green;
+    uint8_t blue;
+} rgb_color_t;
+
+/*****************************************
  * Public Functions Prototypes
  *****************************************/
 
 /**
- * @brief set the transmit data buffer based on WS2812B protocol
+ * @brief set the transmission data buffer based on WS2812B protocol
  *
- * @param rgb_color
+ * @param rgb_color rgb color (from rgb type)
+ * @param data_buffer pointer to data buffer
  *
  */
 void protocol_ws2812b_set_transmit_buffer(rgb_color_t rgb_color, uint8_t* data_buffer);

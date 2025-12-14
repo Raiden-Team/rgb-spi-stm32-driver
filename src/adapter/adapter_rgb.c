@@ -63,7 +63,7 @@ static rgb_color_t rgb_colors[] = {
 /**
  * @brief transmit the rgb color buffer
  *
- * @param rgb_color
+ * @param rgb_color rgb color (from rgb type)
  *
  */
 void adapter_rgb_transmit(rgb_color_t rgb_color);
